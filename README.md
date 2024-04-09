@@ -22,7 +22,7 @@ The dataset comprises embeddings stored in data/X.txt and ground truth labels in
 
 ## Steps for Reproducing Results
 
-This demo outlines steps to reproduce results for schema inference and entity resolution with TableDC.
+This demo outlines steps to reproduce results for schema inference, entity resolution and domain discovery with TableDC. One ready-to-use vector X.txt (for schema Inference) is given in `data/. Just use Step 3 below to get the clustering results.
 
 ### Schema Inference
 
