@@ -7,7 +7,7 @@ This project comprises two major components, each addressing different data inte
 * For schema inference, we use SBERT, FastText, USE, and TabTransformer to embed tables.
 * For entity resolution, we employ EmbDi and SBERT to embed rows.
 * For domain discovery, we utilize T5 and SBERT to embed columns.
-* The generated dense embedding matrix (X.txt) will then serve as the input for clustering in the TableDC.
+* The generated dense embedding matrix `(X.txt)` will then serve as the input for clustering in the TableDC.
 
 ## Prerequisites
 * Python 3.x
@@ -16,13 +16,13 @@ This project comprises two major components, each addressing different data inte
 * scikit-learn
 
 ## Dataset
-The dataset comprises embeddings stored in data/X.txt and ground truth labels in data/label.txt.
+The dataset comprises embeddings stored in `data/X.txt` and ground truth labels in `data/label.txt`.
 
 - **Special thanks** to the authors (of baseline deep clustering and embedding approaches mentioned in the paper) for providing their implementations publicly available.
 
 ## Steps for Reproducing Results
 
-This demo outlines steps to reproduce results for schema inference, entity resolution and domain discovery with TableDC. One ready-to-use vector X.txt (for schema Inference) is given in `data/. Just use Step 3 below to get the clustering results.
+This demo outlines steps to reproduce results for schema inference, entity resolution and domain discovery with TableDC. One ready-to-use vector X.txt (for schema Inference) is given in `data/`. Just use Step 3 below to get the clustering results.
 
 ### Schema Inference
 
@@ -34,9 +34,9 @@ This demo outlines steps to reproduce results for schema inference, entity resol
 
 3. **Clustering with TableDC:**
    - Utilize `X.txt` feature vector for clustering in TableDC:
-     - Navigate to the `data/ and run the pretraining script (pretrain_ae.py): python pretrain_ae.py --pretrain_path data/X.txt.
-     - Ensure that the pretrained model (X.pkl) and dataset (X.txt and label.txt) are in the `data/ directory.
-     - Run the script (TableDC.py): python TableDC.py --pretrain_path data/X.pkl --name X.
+     - Navigate to the `data/` and run the pretraining script `(pretrain_ae.py): python pretrain_ae.py --pretrain_path data/X.txt`.
+     - Ensure that the pretrained model `(X.pkl)` and dataset `(X.txt and label.txt)` are in the `data/ directory`.
+     - Run the script `(TableDC.py): python TableDC.py --pretrain_path data/X.pkl --name X`.
      - Update `nb_dimension = 768` accordingly (for SBERT use 768).
 
 ### Entity Resolution
