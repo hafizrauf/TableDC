@@ -26,7 +26,7 @@ This demo outlines steps to reproduce results for schema inference, entity resol
 
 ### Schema Inference
 
-1. **Schema-Level Web Tables Data (TableDC + SDCN):**
+1. **Schema-Level Web Tables Data (SBERT + TableDC):**
    - Process `schema inference/schema + instances/Preprocessing.ipynb` to extract schema-level information from tables.
 
 2. **Generating Embedding Matrix:**
