@@ -10,10 +10,10 @@ This project comprises two major components, each addressing different data inte
 * The generated dense embedding matrix (X.txt) will then serve as the input for clustering in the TableDC.
 
 ## Prerequisites
-Python 3.x
-PyTorch
-NumPy
-scikit-learn
+* Python 3.x
+* PyTorch
+* NumPy
+* scikit-learn
 
 ## Dataset
 The dataset comprises embeddings stored in data/X.txt and ground truth labels in data/label.txt.
