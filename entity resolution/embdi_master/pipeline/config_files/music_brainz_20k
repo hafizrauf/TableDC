@@ -1,0 +1,24 @@
+# Input configuration:
+task:train
+experiment_type:ER
+match_file:
+input_file:embdi_master/pipeline/edgelist/music_brainz_20k.txt
+walks_file:embdi_master/pipeline/walks/music_brainz_20k.walks
+output_file:music_brainz_20k
+dataset_info:embdi_master/pipeline/info/music_brainz_20k.txt
+# Walks configuration:
+n_sentences:default
+smoothing_method:smooth,0.5,200
+flatten:all
+
+# Embeddings configuration:
+learning_method:skipgram
+window_size:3
+n_dimensions:300
+
+# Test configuration:
+ntop:10
+
+# Miscellaneous:
+indexing:basic
+epsilon:0.1
