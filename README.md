@@ -4,9 +4,9 @@ This repo provides the following:
 The implementation of TableDC, a deep clustering algorithm for data cleaning and integration, specifically schema inference, entity resolution, and domain discovery.
 
 This project comprises two major components, each addressing different data integration challenges: schema inference, entity resolution, and domain discovery:
-* For schema inference, we use SBERT, FastText, USE, and TabTransformer to embed tables.
-* For entity resolution, we employ EmbDi and SBERT to embed rows.
-* For domain discovery, we utilize T5 and SBERT to embed columns.
+* For schema inference, we use [SBERT](https://www.sbert.net/docs/hugging_face.html), [FastText](https://fasttext.cc/docs/en/crawl-vectors.html), USE, and [TabTransformer](https://github.com/jrzaurin/pytorch-widedeep) to embed tables.
+* For entity resolution, we employ [EmbDi](https://gitlab.eurecom.fr/cappuzzo/embdi) and [SBERT](https://www.sbert.net/docs/hugging_face.html) to embed rows.
+* For domain discovery, we utilize T5 and [SBERT](https://www.sbert.net/docs/hugging_face.html) to embed columns.
 * The generated dense embedding matrix `(X.txt)` will then serve as the input for clustering in the TableDC.
 
 ## Prerequisites
