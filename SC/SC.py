@@ -1,6 +1,8 @@
 #!/usr/bin/env python
 # coding: utf-8
 
+
+
 from sklearn.cluster import DBSCAN
 import hdbscan
 
@@ -163,15 +165,17 @@ def revised_rand_index(actual, pred):
 
 
 
-X=pd.read_csv('X.txt', header =None, sep = ' ')
-Y=pd.read_csv('labels.txt', sep=' ', header = None)
+X=pd.read_csv('dataset1.txt', header =None, sep = ' ')
+
+
+Y=pd.read_csv('dataset1_label.txt', sep=' ', header = None)
 Y= pd.DataFrame(Y)
 Y = Y.to_numpy()
 Y=Y.flatten()
 
-n_clusters = 56 # select number of GT clusters
+n_clusters = 16
 
-# print("-----------------------------------Birch----------------------------------------")
+print("-----------------------------------Birch----------------------------------------")
 start = time()
 from sklearn.cluster import Birch
 brc = Birch(n_clusters = n_clusters) #
@@ -196,8 +200,8 @@ end = time()
 print("Birch took ",{end-start}," sec to run.")
 
 
-# print("-----------------------------------Kmean----------------------------------------")
-# #------
+print("-----------------------------------Kmean----------------------------------------")
+#------
 from sklearn.cluster import KMeans
 start = time()
 kmeans = KMeans(n_clusters=n_clusters, n_init=2, random_state= 2).fit(X)
@@ -222,7 +226,7 @@ print("Kmeans took ",{end-start}," sec to run.")
 
 print("--------------------DBSCAN Clustering---------------------")
 
-min_samples = 56  # The number of samples in a neighborhood for a point to be considered as a core point.
+min_samples = 5  # The number of samples (or total weight) in a neighborhood for a point to be considered as a core point.
 
 
 
@@ -249,7 +253,7 @@ plt.ylabel("Distance")
 print("eps value ", distances[knee.knee])
 
 eps = distances[knee.knee]  # if eps is 0 by knee method, just select 0.1, if still not then check 0.1 to 1.0 all parameters
-#eps = 0.5
+
 start = time()
 
 dbscan = DBSCAN(eps=eps, min_samples=min_samples)
