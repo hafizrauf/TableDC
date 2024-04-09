@@ -1,0 +1,7 @@
+gensim==3.8.0
+datasketch
+strsim
+scikit-learn
+numpy
+pandas
+tqdm
